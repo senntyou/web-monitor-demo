@@ -1,8 +1,6 @@
 import { init as initWebMonitor } from '../../web-monitor-sdk/src';
 
-initWebMonitor({
-  server: 'http://localhost:9005',
-});
+initWebMonitor({});
 
 setInterval(() => {
   // eslint-disable-next-line no-undef
