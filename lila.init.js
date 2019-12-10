@@ -9,6 +9,15 @@ export default lila => {
   vueWebpackConfigPlugin(lila);
 
   return () => ({
-    tasks: ['@lila/webpack'],
+    tasks: [
+      '@lila/webpack',
+      [
+        '@lila/move',
+        {
+          source: 'build/index.html',
+          target: 'build/demo.html',
+        },
+      ],
+    ],
   });
 };
